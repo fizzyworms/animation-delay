@@ -1,0 +1,87 @@
+@import "reset.css";
+
+body {
+  background-color: cadetblue;
+  height: 90vh;
+}
+
+.father {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%
+}
+
+.dots, .bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  width: 80px;
+
+}
+
+.dot {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius : 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+  
+.dots {
+  animation: rotate 1s ease-in-out infinite;
+  animation-delay: 1s;
+  margin-bottom: 150px;
+}  
+
+@keyframes bigbars {
+  0% {
+    transform: none;
+    }
+  25% {
+    transform:scale(1, 2);
+  }
+  50% {
+    transform: none;
+  }
+  100% { 
+    transform: none;
+  }
+}
+
+  
+.bar {
+  background-color: white;
+  width: 10px;
+  height: 50px;
+   animation: bigbars 1s ease-in-out infinite;
+}
+
+.bar:first-child {
+  animation-delay: 0s;  
+}
+  
+.bar:nth-child(2) {
+  animation-delay: 0.1s;  
+}
+  
+.bar:nth-child(3) {
+  animation-delay: 0.2s;  
+}
+
+.bar:nth-child(4) {
+  animation-delay: 0.3s;  
+}
+
+.bar:nth-child(5) {
+  animation-delay: 0.4s;  
+}
